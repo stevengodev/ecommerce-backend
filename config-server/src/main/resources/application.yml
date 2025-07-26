@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        #native:
+          #search-locations:
+            #- classpath:/config
+        git:
+          uri: https://github.com/${GITHUB_USERNAME}/${GITHUB_REPOSITORY}.git
+          username: ${GITHUB_USERNAME}
+          password: ${GITHUB_TOKEN}
+server:
+  port: 8888
+
+
