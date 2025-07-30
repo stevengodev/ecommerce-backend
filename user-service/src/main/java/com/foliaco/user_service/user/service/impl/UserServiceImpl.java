@@ -86,7 +86,7 @@ public class UserServiceImpl implements UserService {
 
         dataPaginator.setData(userResponses);
         dataPaginator.setCurrentPage(userPage.getNumber());
-        dataPaginator.setTotalPages(userPage.getSize());
+        dataPaginator.setTotalPages(userPage.getTotalPages());
         return dataPaginator;
 
     }

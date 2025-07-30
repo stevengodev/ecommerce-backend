@@ -36,9 +36,8 @@ public class UserController {
         URI location = URI.create("/api/v1/users/" + id);
         return ResponseEntity.created(location).body(id);
     }
-
     
-    @PutMapping("/update")
+    @PutMapping
     public ResponseEntity<UserResponse> updateUser(@RequestBody UserRequest userRequest) {
         UserResponse userResponse = userService.updateUser(userRequest);
         return ResponseEntity.ok(userResponse);
