@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_package = "com.foliaco.ecommerce.product.grpc";
+option java_multiple_files = true;
+
+service ProductGrpcService {
+  rpc GetProductById (GetProductByIdRequest ) returns (ProductResponse);
+}
+
+message GetProductByIdRequest  {
+  int32 id = 1;
+}
+
+message ProductResponse {
+  string name = 1;
+  string description = 2;
+  string price = 3;
+  int32 stock = 4;
+  string categoryName = 5;
+}
+

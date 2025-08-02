@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_package = "com.foliaco.ecommerce.user.grpc";
+option java_multiple_files = true;
+
+service UserGrpcService {
+  rpc GetUserById (GetUserByIdRequest ) returns (UserResponse);
+}
+
+message GetUserByIdRequest {
+  string id = 1;
+}
+
+message UserResponse {
+  string firstname = 1;
+  string lastname = 2;
+  string email = 3;
+  string phoneNumber = 4;
+}
